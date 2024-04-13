@@ -5,8 +5,16 @@ const jobSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    skill: {
+    skills: {
         type: Array,
+        required: true
+    },
+    company: {
+        type: String,
+        required: true
+    },
+    type: {
+        type: String,
         required: true
     },
     location: {
@@ -25,7 +33,20 @@ const jobSchema = mongoose.Schema({
         type: String,
         required: true
     },
-});
+    description: {
+        type: String,
+        required: true
+    },
+    imageUrl: {
+        type: String,
+        required: false
+    },
+    userDetails: {
+        type: Object,
+    }
+},
+    { timestamps: true }
+);
 
 const jobposts = mongoose.model("jobposts", jobSchema);
 

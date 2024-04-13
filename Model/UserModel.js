@@ -17,6 +17,9 @@ const userSchema = mongoose.Schema({
         type: String,
         required: true
     },
+    profileUrl: {
+        type: String,
+    },
     role: {
         type: String,
 
@@ -41,11 +44,11 @@ const userSchema = mongoose.Schema({
 
     },
     education: {
-        type: String,
+        type: Array,
 
     },
     experience: {
-        type: String,
+        type: Array,
 
     },
     isactive: {
